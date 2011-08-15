@@ -1,9 +1,19 @@
-ISOweekday <-
-function(Datum) {
-# Berechnet Tag der Woche nach ISO-Standard
-# Gibt Zahl zwischen 1 und 7 zurück, Montag ist 1
-# format %w returns
-# Weekday as decimal number (0–6, Sunday is 0).
-	(as.numeric(format(Datum, "%w"))+6) %% 7 + 1
+#' Day of week according to ISO 8601
+#'
+#' This function returns the weekday of a given date according to ISO 8601.
+#' It is an substitute for the "\code{\%u}" format which is not implemented on Windows.
+#' 
+#' @param date Vector which can be coerced to class \code{Date}
+#' @return An integer vector of weekdays (1-7, Monday is 1)
+#' @seealso \code{\link{strptime}}
+#' @export
+#' @examples
+#' x <- paste(1999:2011, "-12-31", sep="")
+#' y <- as.Date(x)
+#' data.frame(date = format(y), weekday = ISOweekday(y))
+#' data.frame(date = x, weekday = ISOweekday(x))
+ISOweekday <- function(date) {
+  date <- as.Date(date)
+  return(as.integer((as.integer(format(date, "%w"))+6) %% 7 + 1))
 }
 

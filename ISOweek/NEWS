@@ -1,0 +1,11 @@
+ISOweek 0.5
+-----------
+
+MAJOR CHANGES
+
+* Code was restructured and rewritten. Comments and variable names were translated 
+  from German to English.
+
+* Documentation added to R sources using roxygen2
+
+* Test cases added for use by test_that

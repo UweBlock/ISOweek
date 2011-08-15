@@ -1,10 +1,17 @@
 Package: ISOweek
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
-Date: 2011-08-10
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Title: Week of the year and weekday according to ISO 8601
+Version: 0.5
+Date: 2011-08-15
+Author: Uwe Block <u.block.mz@gmail.com>, using an
+    algorithm by Hatto von Hatzfeld <hatto@salesianer.de>
+Maintainer: Uwe Block <u.block.mz@gmail.com>
+Suggests:
+    testthat
+Description: This is an replacement for the %V and %u
+    formats which are not implemented on Windows.
+License: GPL (>= 2)
 LazyLoad: yes
+Collate:
+    'ISOweek.R'
+    'ISOweekday.R'
