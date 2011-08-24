@@ -44,15 +44,17 @@ year0 <- function(date) {
 #'
 #' @param date Vector which can be coerced to class \code{Date}
 #' @return A character vector of year and week in format "\code{\%Y-W\%V}"
-#' @seealso \code{\link{strptime}}
+#' @seealso \code{\link{strptime}} for a description of the date formats and references on ISO 8601. 
+#'   \code{\link[surveillance]{isoWeekYear}} for an alternative implementation.
 #' @export
-#' @author Hatto von Hatzfeld <hatto@@salesianer.de>, adopted to R by Uwe Block <u.block.mz@@gmail.com>
+#' @author Hatto von Hatzfeld <\email{hatto@@salesianer.de}>, adopted to \R by Uwe Block 
+#'   <\email{u.block.mz@@gmail.com}>
 #' @references \url{http://www.salesianer.de/util/kalwoch.html}
 #' @examples
 #' x <- paste(1999:2011, "-12-31", sep="")
 #' y <- as.Date(x)
 #' data.frame(date = format(y), week = ISOweek(y))
-#' data.frame(date = x, week = ISOweekday(x))
+#' data.frame(date = x, week = ISOweek(x))
 ISOweek <- function(date) {
   date <- as.Date(date)
 	nearest_thursday <- thursday0(date)

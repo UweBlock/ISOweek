@@ -35,8 +35,8 @@ test_that("ISOweek returns proper values", {
   expect_that(ISOweek(input_chr), equals(result_chr))
 })
 test_that("ISOweek handles NAs", {
-  expect_that(ISOweekday(NA), equals(NA_integer_))
-  expect_that(ISOweekday(NA_character_), equals(NA_integer_))
+  expect_that(ISOweek(NA), equals(NA_character_))
+  expect_that(ISOweek(NA_character_), equals(NA_character_))
   input_chr <- paste(1999:2011, "-12-31", sep="")
   result_chr <- c("1999-W52", "2000-W52", "2002-W01", "2003-W01", "2004-W01", 
                   "2004-W53", "2005-W52", "2006-W52", "2008-W01", "2009-W01",
@@ -50,7 +50,11 @@ test_that("ISOweek handles NAs", {
   expect_that(ISOweek(input_date_NA), equals(result_chr_NA))
   expect_that(ISOweek(input_chr_NA), equals(result_chr_NA))
 })
-test_that("ISOweekday stops on invalid parameters", {
+test_that("ISOweek handles zero length vectors", {
+  input_date <- as.Date("1999-12-31")
+  expect_that(length(ISOweek(input_date[0])), equals(0))
+})
+test_that("ISOweek stops on invalid parameters", {
   expect_that(ISOweek(31), throws_error())
   expect_that(ISOweek(31.1), throws_error())
   expect_that(ISOweek(FALSE), throws_error())

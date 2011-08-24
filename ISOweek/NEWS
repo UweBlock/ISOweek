@@ -1,3 +1,11 @@
+ISOweek 0.6.0
+-------------
+
+MAJOR CHANGES
+
+* Added the functions date2ISOweek() and ISOweek2date()
+
+
 ISOweek 0.5
 -----------
 

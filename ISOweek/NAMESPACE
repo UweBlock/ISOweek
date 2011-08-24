@@ -1,2 +1,4 @@
+export(date2ISOweek)
 export(ISOweek)
+export(ISOweek2date)
 export(ISOweekday)

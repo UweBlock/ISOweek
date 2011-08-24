@@ -24,6 +24,10 @@ test_that("ISOweekday handles NAs", {
   expect_that(ISOweekday(input_date_NA), equals(result_int_NA))
   expect_that(ISOweekday(input_chr_NA), equals(result_int_NA))
 })
+test_that("ISOweekday handles zero length vectors", {
+  input_date <- as.Date("1999-12-31")
+  expect_that(length(ISOweekday(input_date[0])), equals(0))
+})
 test_that("ISOweekday stops on invalid parameters", {
   expect_that(ISOweekday(31), throws_error())
   expect_that(ISOweekday(31.1), throws_error())

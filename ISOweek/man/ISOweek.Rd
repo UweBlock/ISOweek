@@ -26,16 +26,19 @@
 x <- paste(1999:2011, "-12-31", sep="")
 y <- as.Date(x)
 data.frame(date = format(y), week = ISOweek(y))
-data.frame(date = x, week = ISOweekday(x))
+data.frame(date = x, week = ISOweek(x))
 }
 \author{
-  Hatto von Hatzfeld <hatto@salesianer.de>, adopted to R by
-  Uwe Block <u.block.mz@gmail.com>
+  Hatto von Hatzfeld <\email{hatto@salesianer.de}>, adopted
+  to \R by Uwe Block <\email{u.block.mz@gmail.com}>
 }
 \references{
   \url{http://www.salesianer.de/util/kalwoch.html}
 }
 \seealso{
-  \code{\link{strptime}}
+  \code{\link{strptime}} for a description of the date
+  formats and references on ISO 8601.
+  \code{\link[surveillance]{isoWeekYear}} for an
+  alternative implementation.
 }
 
