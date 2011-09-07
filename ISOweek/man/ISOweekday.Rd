@@ -17,10 +17,13 @@
   "\code{\%u}" format which is not implemented on Windows.
 }
 \examples{
-x <- paste(1999:2011, "-12-31", sep="")
+x <- paste(1999:2011, "-12-31", sep = "")
 y <- as.Date(x)
 data.frame(date = format(y), weekday = ISOweekday(y))
 data.frame(date = x, weekday = ISOweekday(x))
+}
+\author{
+  Uwe Block \email{u.block.mz@googlemail.com}
 }
 \seealso{
   \code{\link{strptime}}

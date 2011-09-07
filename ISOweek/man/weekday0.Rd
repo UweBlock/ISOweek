@@ -21,4 +21,5 @@
 \seealso{
   \code{\link{ISOweekday}}
 }
+\keyword{internal}
 

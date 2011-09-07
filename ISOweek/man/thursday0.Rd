@@ -18,4 +18,5 @@
 \details{
   The week starts on Monday and ends on Sunday.
 }
+\keyword{internal}
 

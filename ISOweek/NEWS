@@ -1,3 +1,17 @@
+ISOweek 0.6-1
+-------------
+
+MINOR CHANGES
+
+* Minor corrections to the documentation
+
+* Added one more example to ISOweek2date()
+
+* Moved internal functions to separate file, added keyword internal
+
+* Corrected email address of maintainer
+
+
 ISOweek 0.6.0
 -------------
 

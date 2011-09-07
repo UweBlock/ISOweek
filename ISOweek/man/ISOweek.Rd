@@ -23,14 +23,14 @@
   from the calendar year (see the examples).
 }
 \examples{
-x <- paste(1999:2011, "-12-31", sep="")
+x <- paste(1999:2011, "-12-31", sep = "")
 y <- as.Date(x)
 data.frame(date = format(y), week = ISOweek(y))
 data.frame(date = x, week = ISOweek(x))
 }
 \author{
-  Hatto von Hatzfeld <\email{hatto@salesianer.de}>, adopted
-  to \R by Uwe Block <\email{u.block.mz@gmail.com}>
+  Hatto von Hatzfeld \email{hatto@salesianer.de}, adopted
+  to \R by Uwe Block \email{u.block.mz@googlemail.com}
 }
 \references{
   \url{http://www.salesianer.de/util/kalwoch.html}

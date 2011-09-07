@@ -5,10 +5,11 @@
 #' 
 #' @param date Vector which can be coerced to class \code{Date}
 #' @return An integer vector of weekdays (1-7, Monday is 1)
+#' @author Uwe Block \email{u.block.mz@@googlemail.com}
 #' @seealso \code{\link{strptime}}
 #' @export
 #' @examples
-#' x <- paste(1999:2011, "-12-31", sep="")
+#' x <- paste(1999:2011, "-12-31", sep = "")
 #' y <- as.Date(x)
 #' data.frame(date = format(y), weekday = ISOweekday(y))
 #' data.frame(date = x, weekday = ISOweekday(x))

@@ -1,40 +1,3 @@
-#' Weekday as integer number (0-6, Monday is 0) 
-#'
-#' This internal function returns the weekday of a given date.
-#' 
-#' The week starts on Monday and ends on Sunday.
-#'
-#' @param date Vector which can be coerced to class \code{Date}
-#' @return An integer vector of weekdays (0-6, Monday is 0)
-#' @seealso \code{\link{ISOweekday}}
-weekday0 <- function(date) {
-  return(ISOweekday(date) - 1L)
-}
-
-#' Date of the nearest Thursday of a given date
-#'
-#' This internal function returns the date of the Thursday of the week in which the given date is located.
-#' 
-#' The week starts on Monday and ends on Sunday.
-#'
-#' @param date Vector which can be coerced to class \code{Date}
-#' @return A vector of dates of the nearest Thursdays
-thursday0 <- function(date) {
-  date <- as.Date(date)
-  return(date - weekday0(date) + 3)
-}
-
-#' Calendar year of a given date
-#'
-#' This internal function returns the year with century as integer.
-#'
-#' @param date Vector which can be coerced to class \code{Date}
-#' @return An integer vector of years
-year0 <- function(date) {
-  date <- as.Date(date)
-	return(as.integer(format(date, "%Y")))
-}
-
 #' Week of the year according to ISO 8601
 #'
 #' This function returns the year and the week of the year of a given date according to ISO 8601.
@@ -47,11 +10,11 @@ year0 <- function(date) {
 #' @seealso \code{\link{strptime}} for a description of the date formats and references on ISO 8601. 
 #'   \code{\link[surveillance]{isoWeekYear}} for an alternative implementation.
 #' @export
-#' @author Hatto von Hatzfeld <\email{hatto@@salesianer.de}>, adopted to \R by Uwe Block 
-#'   <\email{u.block.mz@@gmail.com}>
+#' @author Hatto von Hatzfeld \email{hatto@@salesianer.de}, 
+#'   adopted to \R by Uwe Block \email{u.block.mz@@googlemail.com}
 #' @references \url{http://www.salesianer.de/util/kalwoch.html}
 #' @examples
-#' x <- paste(1999:2011, "-12-31", sep="")
+#' x <- paste(1999:2011, "-12-31", sep = "")
 #' y <- as.Date(x)
 #' data.frame(date = format(y), week = ISOweek(y))
 #' data.frame(date = x, week = ISOweek(x))

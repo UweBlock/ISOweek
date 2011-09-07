@@ -9,9 +9,9 @@
 #' @return A character vector of year, week, and weekday in format "\code{\%Y-W\%V-\%u}"
 #' @seealso \code{\link{strptime}} for a description of the date formats and references on ISO 8601. 
 #' @export
-#' @author Uwe Block <\email{u.block.mz@@gmail.com}>
+#' @author Uwe Block \email{u.block.mz@@googlemail.com}
 #' @examples
-#' x <- paste(1999:2011, "-12-31", sep="")
+#' x <- paste(1999:2011, "-12-31", sep = "")
 #' y <- as.Date(x)
 #' data.frame(date = format(y), weekdate = date2ISOweek(y))
 #' data.frame(date = x, weekdate = date2ISOweek(x))

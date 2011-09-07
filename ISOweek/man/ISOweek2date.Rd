@@ -21,13 +21,16 @@
   from the calendar year (see the examples).
 }
 \examples{
-x <- paste(1999:2011, "-12-31", sep="")
+w <- paste("2009-W53", 1:7, sep = "-")
+data.frame(weekdate = w, date = ISOweek2date(w))
+# convert from calendar date to week date and back to calendar date
+x <- paste(1999:2011, "-12-31", sep = "")
 w <- date2ISOweek(x)
 d <- ISOweek2date(w)
 data.frame(date = x, weekdate = w, date2 = d)
 }
 \author{
-  Uwe Block <\email{u.block.mz@gmail.com}>
+  Uwe Block \email{u.block.mz@googlemail.com}
 }
 \seealso{
   \code{\link{strptime}} for a description of the date

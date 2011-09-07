@@ -9,9 +9,13 @@
 #' @return A vector of class \code{Date}
 #' @seealso \code{\link{strptime}} for a description of the date formats and references on ISO 8601. 
 #' @export
-#' @author Uwe Block <\email{u.block.mz@@gmail.com}>
+#' @importFrom stringr str_detect str_match
+#' @author Uwe Block \email{u.block.mz@@googlemail.com}
 #' @examples
-#' x <- paste(1999:2011, "-12-31", sep="")
+#' w <- paste("2009-W53", 1:7, sep = "-")
+#' data.frame(weekdate = w, date = ISOweek2date(w))
+#' # convert from calendar date to week date and back to calendar date
+#' x <- paste(1999:2011, "-12-31", sep = "")
 #' w <- date2ISOweek(x)
 #' d <- ISOweek2date(w)
 #' data.frame(date = x, weekdate = w, date2 = d)

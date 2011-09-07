@@ -15,4 +15,5 @@
   This internal function returns the year with century as
   integer.
 }
+\keyword{internal}
 
