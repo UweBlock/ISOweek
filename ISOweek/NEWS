@@ -1,3 +1,12 @@
+ISOweek 0.6-2
+-------------
+
+BUG FIX
+
+* Fixed problems when package "lubridate" is loaded.
+  lubridate overrides + and - methods for POSIXt, Date and difftime
+
+
 ISOweek 0.6-1
 -------------
 

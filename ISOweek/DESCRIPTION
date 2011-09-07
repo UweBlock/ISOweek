@@ -1,9 +1,9 @@
 Package: ISOweek
 Type: Package
 Title: Week of the year and weekday according to ISO 8601
-Version: 0.6-1
-Date: 2011-08-25
-Author: Uwe Block <u.block.mz@gmail.com>, using an
+Version: 0.6-2
+Date: 2011-09-07
+Author: Uwe Block <u.block.mz@googlemail.com>, using an
     algorithm by Hatto von Hatzfeld <hatto@salesianer.de>
 Maintainer: Uwe Block <u.block.mz@googlemail.com>
 Imports:

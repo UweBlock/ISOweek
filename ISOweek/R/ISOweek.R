@@ -27,8 +27,12 @@ ISOweek <- function(date) {
   january04 <- as.Date(ifelse(is.na(year), NA, paste(year, "01", "04", sep="-")))
   # first thursday of the year
 	first_thursday <- thursday0(january04)
-  # as.numeric is required to convert difftime object
-	week <- as.numeric(nearest_thursday - first_thursday) %/% 7 + 1
+  # difference in days, use difftime explicitly to avoid problems with package "lubridate"
+  # lubridate overrides + and - methods for POSIXt, Date and difftime
+  diffdays <- difftime(nearest_thursday, first_thursday, units = "days")
+  stopifnot(class(diffdays) == "difftime")
+  # as.integer is required to convert difftime object
+	week <- as.integer(diffdays) %/% 7 + 1
   # use sprintf to produce leading zeros for the week number
 	return(ifelse(is.na(week), NA_character_, sprintf("%04.0f-W%02.0f", year, week)))
 }
