@@ -1,0 +1,6 @@
+export(date2ISOweek)
+export(ISOweek)
+export(ISOweek2date)
+export(ISOweekday)
+importFrom(stringr,str_detect)
+importFrom(stringr,str_match)

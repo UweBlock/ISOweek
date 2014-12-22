@@ -1,0 +1,42 @@
+ISOweek 0.6-2
+-------------
+
+BUG FIX
+
+* Fixed problems when package "lubridate" is loaded.
+  lubridate overrides + and - methods for POSIXt, Date and difftime
+
+
+ISOweek 0.6-1
+-------------
+
+MINOR CHANGES
+
+* Minor corrections to the documentation
+
+* Added one more example to ISOweek2date()
+
+* Moved internal functions to separate file, added keyword internal
+
+* Corrected email address of maintainer
+
+
+ISOweek 0.6.0
+-------------
+
+MAJOR CHANGES
+
+* Added the functions date2ISOweek() and ISOweek2date()
+
+
+ISOweek 0.5
+-----------
+
+MAJOR CHANGES
+
+* Code was restructured and rewritten. Comments and variable names were translated 
+  from German to English.
+
+* Documentation added to R sources using roxygen2
+
+* Test cases added for use by test_that
