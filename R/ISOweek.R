@@ -8,7 +8,7 @@
 #' @param date Vector which can be coerced to class \code{Date}
 #' @return A character vector of year and week in format "\code{\%Y-W\%V}"
 #' @seealso \code{\link{strptime}} for a description of the date formats and references on ISO 8601. 
-#'   \code{\link[surveillance]{isoWeekYear}} for an alternative implementation.
+#'   \code{isoWeekYear} in the \code{surveillance} package for an alternative implementation.
 #' @export
 #' @author Hatto von Hatzfeld \email{hatto@@salesianer.de}, 
 #'   adopted to \R by Uwe Block \email{u.block.mz@@googlemail.com}

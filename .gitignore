@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 ISOweek.Rproj
+.Rbuildignore
+man/*.Rd
+NAMESPACE

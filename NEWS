@@ -1,3 +1,11 @@
+ISOweek 0.6-3
+-------------
+
+BUG FIX
+
+* Changed reference to package surveillance which caused problems on MacOS.
+
+
 ISOweek 0.6-2
 -------------
 
