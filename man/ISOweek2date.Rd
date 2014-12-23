@@ -7,16 +7,19 @@
 ISOweek2date(weekdate)
 }
 \arguments{
-\item{weekdate}{A character vector of year, week, and weekday in format "\code{\%Y-W\%V-\%u}"}
+\item{weekdate}{A character vector of year, week, and weekday in format "\code{\%G-W\%V-\%u}"}
 }
 \value{
 A vector of class \code{Date}
 }
 \description{
-This function returns the date of a given weekdate (year, week of the year, day of week according to ISO 8601).
-It is the inverse function to \code{date2ISOweek}.
+Returns the date of a given weekdate (year, week of the year, day of week according
+to ISO 8601). It is the inverse function to \code{\link{date2ISOweek}} and a substitute for
+\code{strptime(x, "\%G-W\%V-\%u")}.
 }
 \details{
+\code{strptime} accepts but ignores the conversion specifications
+\code{\%g}, \code{\%G}, \code{\%V} on input.
 According to ISO 8601, the year of the week can differ from the calendar year (see the examples).
 }
 \examples{
@@ -29,9 +32,10 @@ d <- ISOweek2date(w)
 data.frame(date = x, weekdate = w, date2 = d)
 }
 \author{
-Uwe Block \email{u.block.mz@googlemail.com}
+Uwe Block \email{u.block.mz@gmail.com}
 }
 \seealso{
-\code{\link{strptime}} for a description of the date formats and references on ISO 8601.
+The inverse function \code{\link{date2ISOweek}}. \code{\link{strptime}} for a
+description of conversion specifications and references on ISO 8601.
 }
 

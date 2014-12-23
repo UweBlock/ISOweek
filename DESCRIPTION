@@ -1,8 +1,8 @@
 Package: ISOweek
 Type: Package
-Title: Week of the year and weekday according to ISO 8601
-Version: 0.6-3
-Date: 2014-12-22
+Title: Week of the Year and Weekday According to ISO 8601
+Version: 0.6-4
+Date: 2014-12-23
 Author: Uwe Block <u.block.mz@gmail.com>, using an
     algorithm by Hatto von Hatzfeld <hatto@salesianer.de>
 Maintainer: Uwe Block <u.block.mz@gmail.com>
@@ -10,13 +10,13 @@ Imports:
     stringr
 Suggests:
     testthat
-Description: This is an substitute for the %V and %u
-    formats which are not implemented on Windows. In
-    addition, the package offers functions to convert from
-    standard calender format yyyy-mm-dd to and from ISO
-    8601 week format yyyy-Www-d.
+Description: This is an alternative to strftime(x, "%G-W%V") 
+    and a substitute for strptime(x, "%G-W%V-%u") on input.
+    In addition, the package offers functions to convert from
+    standard calender format yyyy-mm-dd to and from ISO 8601 
+    week format yyyy-Www-d. 
 License: GPL (>= 2)
-LazyLoad: yes
+URL: https://github.com/UweBlock/ISOweek
 Collate:
     'ISOweek.R'
     'ISOweekday.R'

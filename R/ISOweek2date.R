@@ -1,16 +1,20 @@
 #' Converts date from week notation according to ISO 8601 to standard notation
 #'
-#' This function returns the date of a given weekdate (year, week of the year, day of week according to ISO 8601).
-#' It is the inverse function to \code{date2ISOweek}.
+#' Returns the date of a given weekdate (year, week of the year, day of week according 
+#' to ISO 8601). It is the inverse function to \code{\link{date2ISOweek}} and a substitute for 
+#' \code{strptime(x, "\%G-W\%V-\%u")}.
 #'
+#' \code{strptime} accepts but ignores the conversion specifications 
+#' \code{\%g}, \code{\%G}, \code{\%V} on input.
 #' According to ISO 8601, the year of the week can differ from the calendar year (see the examples).
 #'
-#' @param weekdate A character vector of year, week, and weekday in format "\code{\%Y-W\%V-\%u}"
+#' @param weekdate A character vector of year, week, and weekday in format "\code{\%G-W\%V-\%u}"
 #' @return A vector of class \code{Date}
-#' @seealso \code{\link{strptime}} for a description of the date formats and references on ISO 8601. 
+#' @seealso The inverse function \code{\link{date2ISOweek}}. \code{\link{strptime}} for a 
+#' description of conversion specifications and references on ISO 8601. 
 #' @export
 #' @importFrom stringr str_detect str_match
-#' @author Uwe Block \email{u.block.mz@@googlemail.com}
+#' @author Uwe Block \email{u.block.mz@@gmail.com}
 #' @examples
 #' w <- paste("2009-W53", 1:7, sep = "-")
 #' data.frame(weekdate = w, date = ISOweek2date(w))

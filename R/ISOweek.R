@@ -1,17 +1,21 @@
 #' Week of the year according to ISO 8601
 #'
-#' This function returns the year and the week of the year of a given date according to ISO 8601.
-#' It is an substitute for the \code{\%Y-W\%V} format which is not implemented on Windows.
-#'
+#' Returns the year and the week of the year of a given date according to ISO 8601.
+#' It is an alternative to \code{strftime(x, "\%G-W\%V")}.  
+#' 
+#' The conversion specifications \code{\%g}, \code{\%G}, \code{\%V}, \code{\%u} 
+#' where not available on Windows and MacOS before \code{R 3.1.0}.
 #' According to ISO 8601, the year of the week can differ from the calendar year (see the examples).
 #'
-#' @param date Vector which can be coerced to class \code{Date}
-#' @return A character vector of year and week in format "\code{\%Y-W\%V}"
-#' @seealso \code{\link{strptime}} for a description of the date formats and references on ISO 8601. 
-#'   \code{isoWeekYear} in the \code{surveillance} package for an alternative implementation.
+#' 
+#' @param date Vector which can be coerced to class \code{Date}.
+#' @return A character vector of year and week in format "\code{\%G-W\%V}".
+#' @seealso \code{\link{strftime}} for a description of conversion specifications and references 
+#' on ISO 8601. 
+#' @seealso \code{isoWeekYear} in the \code{surveillance} package for an alternative implementation.
 #' @export
 #' @author Hatto von Hatzfeld \email{hatto@@salesianer.de}, 
-#'   adopted to \R by Uwe Block \email{u.block.mz@@googlemail.com}
+#'   adopted to \R by Uwe Block \email{u.block.mz@@gmail.com}
 #' @references \url{http://www.salesianer.de/util/kalwoch.html}
 #' @examples
 #' x <- paste(1999:2011, "-12-31", sep = "")
