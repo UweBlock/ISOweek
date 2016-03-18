@@ -1,7 +1,7 @@
 ISOweek 0.6-4
 -------------
 
-MINOR CHANGES
+### MINOR CHANGES
 
 * Updated documentation to reflect enhancements in strftime introduced with R.3.1.0
 
