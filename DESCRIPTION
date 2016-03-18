@@ -10,11 +10,11 @@ Imports:
     stringr
 Suggests:
     testthat
-Description: This is an alternative to strftime(x, "%G-W%V") 
+Description: This is an alternative to strftime(x, "%G-W%V")
     and a substitute for strptime(x, "%G-W%V-%u") on input.
     In addition, the package offers functions to convert from
-    standard calender format yyyy-mm-dd to and from ISO 8601 
-    week format yyyy-Www-d. 
+    standard calender format yyyy-mm-dd to and from ISO 8601
+    week format yyyy-Www-d.
 License: GPL (>= 2)
 URL: https://github.com/UweBlock/ISOweek
 Collate:
@@ -23,3 +23,4 @@ Collate:
     'date2ISOweek.R'
     'ISOweek2date.R'
     'ISOweek-internal.R'
+RoxygenNote: 5.0.1
