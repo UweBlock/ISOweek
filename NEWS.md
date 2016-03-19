@@ -3,6 +3,7 @@ ISOweek 0.6.4.9000
 
 MINOR CHANGES
 
+* Udate `DOCUMENTATION` file.
 * Move tests from `inst` to `tests/testthat`.
 * Replace `test_package` by `test_check` to pass CRAN checks.
 * Rename `NEWS` to `NEWS.md` and reformat contents with `markdown`.

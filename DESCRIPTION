@@ -3,9 +3,10 @@ Type: Package
 Title: Week of the Year and Weekday According to ISO 8601
 Version: 0.6.4.9000
 Date: 2016-03-18
-Author: Uwe Block <u.block.mz@gmail.com>, using an
-    algorithm by Hatto von Hatzfeld <hatto@salesianer.de>
-Maintainer: Uwe Block <u.block.mz@gmail.com>
+Authors@R: c(person("Uwe", "Block", email = "u.block.mz@gmail.com",
+             role = c("aut", "cre")),
+             person("Hatto", "von Hatzfeld", 
+             email = "hatto@salesianer.de", role = "ctb"))
 Imports:
     stringr
 Suggests:
