@@ -3,6 +3,8 @@ ISOweek 0.6.4.9000
 
 MINOR CHANGES
 
+* Rename `README` to `README.md`, reformat contents with `markdown`, and 
+  update description of package.
 * Udate `DOCUMENTATION` file.
 * Move tests from `inst` to `tests/testthat`.
 * Replace `test_package` by `test_check` to pass CRAN checks.
