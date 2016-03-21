@@ -1,3 +1,6 @@
+
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ISOweek)](http://cran.r-project.org/package=ISOweek)  
+
 ISOweek
 =======
 
