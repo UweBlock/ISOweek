@@ -1,5 +1,6 @@
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ISOweek)](http://cran.r-project.org/package=ISOweek)  
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/ISOweek)](http://cran.r-project.org/package=ISOweek)
+[![CRAN Downloads](http://cranlogs.r-pkg.org/badges/grand-total/ISOweek)](https://hadley.shinyapps.io/cran-downloads)  
 
 ISOweek
 =======
