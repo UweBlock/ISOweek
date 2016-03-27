@@ -3,6 +3,7 @@ ISOweek 0.6.4.9000
 
 MINOR CHANGES
 
+* Add CRAN download badge to `README.md` file.
 * Add CRAN badge to `README.md` file.
 * Rename `README` to `README.md`, reformat contents with `markdown`, and 
   update description of package.
